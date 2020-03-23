@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\andrea.cortesi\.Rider2019.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\andrea.cortesi\.Rider2019.3\system\resharper-host\local\Transient\ReSharperHost\v193\SolutionCaches\_AirLine.11498059.00" t="ExcludeRecursive" />
+    <e p="C:\Users\andrea.cortesi\source\repos\AirLine" t="IncludeRecursive">
+      <e p="AirLine.csproj" t="IncludeRecursive" />
+      <e p="AirLine.sln" t="IncludeFlat" />
+      <e p="ApplicationCore" t="Include">
+        <e p="Interfaces" t="Include">
+          <e p="IPersonaService.cs" t="Include" />
+        </e>
+        <e p="PersonaService.cs" t="Include" />
+      </e>
+      <e p="appsettings.Development.json" t="Include" />
+      <e p="appsettings.json" t="Include" />
+      <e p="bin" t="ExcludeRecursive" />
+      <e p="ConfingureConteainerExtantions.cs" t="Include" />
+      <e p="Controllers" t="Include">
+        <e p="PersonaController.cs" t="Include" />
+      </e>
+      <e p="Infrastructure" t="Include">
+        <e p="Interfaces" t="Include">
+          <e p="IPersonaRepository.cs" t="Include" />
+        </e>
+        <e p="PersonaRepository.cs" t="Include" />
+      </e>
+      <e p="Models" t="Include">
+        <e p="AirLinesContext.cs" t="Include" />
+        <e p="Passeggero.cs" t="Include" />
+        <e p="Persona.cs" t="Include" />
+        <e p="Volo.cs" t="Include" />
+      </e>
+      <e p="obj" t="ExcludeRecursive">
+        <e p="Debug" t="Include">
+          <e p="netcoreapp3.1" t="Include">
+            <e p="AirLine.AssemblyInfo.cs" t="Include" />
+          </e>
+        </e>
+      </e>
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="Program.cs" t="Include" />
+      <e p="Properties" t="Include">
+        <e p="launchSettings.json" t="Include" />
+      </e>
+      <e p="Startup.cs" t="Include" />
+    </e>
+  </component>
+</project>
