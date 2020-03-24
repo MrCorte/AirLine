@@ -1,11 +1,18 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Threading.Tasks;
+using AirLine.ApplicationCore;
+using AirLine.ApplicationCore.Interfaces;
+using AirLine.Infrastructure;
+using AirLine.Infrastructure.Interfaces;
+using AirLine.Models;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -26,6 +33,15 @@ namespace AirLine
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+            
+            //connection string per il db
+            services.AddDbContext<AirLinesContext>(options =>
+                options.UseSqlServer("Server=DN-NB0282;Database=AirLines;Trusted_Connection=True;"));
+            
+            // riferimento per il completamento della dependency injection
+            services.AddTransientServices();
+            
+            
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
