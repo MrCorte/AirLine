@@ -17,10 +17,11 @@ namespace AirLine
         {
             // infrastructure
             serviceCollection.AddTransient<IPersonaRepository, PersonaRepository>();
-            
+            serviceCollection.AddTransient<IVoloRepository, VoloRepository>();
             
             // applicationcore
             serviceCollection.AddTransient<IPersonaService, PersonaService>();
+            serviceCollection.AddTransient<IVoloService, VoloService>();
         }
     }
 }

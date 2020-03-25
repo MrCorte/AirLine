@@ -7,7 +7,7 @@ using AirLine.Models;
 
 namespace AirLine.Infrastructure
 {
-    public class PersonaRepository : AirLinesContext, IPersonaRepository
+    public class PersonaRepository : IPersonaRepository
     {
         private AirLinesContext airLinesContext;
 
@@ -18,24 +18,23 @@ namespace AirLine.Infrastructure
 
         public Persona[] GetPersone()
         {
-            var db = airLinesContext;
-            var dbPersone = db.Persona;
+            var db = airLinesContext.Persona;
             Persona[] persone;
-            persone = dbPersone.ToArray();
+            persone = db.ToArray();
             return persone;
         }
 
         public Persona GetPersonaById(int Id)
         {
-            var db = airLinesContext;
-            Persona persona = (Persona) db.Persona.Where(i => i.Id == Id).First();
+            var db = airLinesContext.Persona;
+            Persona persona = (Persona) db.Where(i => i.Id == Id).First();
             return persona;
         }
 
         public bool PostPersona(Persona persona)
         {
-            var db = airLinesContext;
-            db.Persona.Add(persona);
+            var db = airLinesContext.Persona;
+            db.Add(persona);
             return true;
         }
 

@@ -10,8 +10,10 @@
       <e p="ApplicationCore" t="Include">
         <e p="Interfaces" t="Include">
           <e p="IPersonaService.cs" t="Include" />
+          <e p="IVoloService.cs" t="Include" />
         </e>
         <e p="PersonaService.cs" t="Include" />
+        <e p="VoloService.cs" t="Include" />
       </e>
       <e p="appsettings.Development.json" t="Include" />
       <e p="appsettings.json" t="Include" />
@@ -19,12 +21,15 @@
       <e p="ConfingureConteainerExtantions.cs" t="Include" />
       <e p="Controllers" t="Include">
         <e p="PersonaController.cs" t="Include" />
+        <e p="VoloController.cs" t="Include" />
       </e>
       <e p="Infrastructure" t="Include">
         <e p="Interfaces" t="Include">
           <e p="IPersonaRepository.cs" t="Include" />
+          <e p="IVoloRepository.cs" t="Include" />
         </e>
         <e p="PersonaRepository.cs" t="Include" />
+        <e p="VoloRepository.cs" t="Include" />
       </e>
       <e p="Models" t="Include">
         <e p="AirLinesContext.cs" t="Include" />
