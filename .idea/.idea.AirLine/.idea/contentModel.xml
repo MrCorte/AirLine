@@ -25,9 +25,11 @@
       </e>
       <e p="Infrastructure" t="Include">
         <e p="Interfaces" t="Include">
+          <e p="IPasseggeroRepository.cs" t="Include" />
           <e p="IPersonaRepository.cs" t="Include" />
           <e p="IVoloRepository.cs" t="Include" />
         </e>
+        <e p="PasseggeroRepository.cs" t="Include" />
         <e p="PersonaRepository.cs" t="Include" />
         <e p="VoloRepository.cs" t="Include" />
       </e>
