@@ -24,10 +24,18 @@ namespace AirLine.Infrastructure.Interfaces
     public Passeggero getPasseggeroById(int Id)
     {
         var db = airLinesContext.Passeggero;
-        var persona = db.Where(i => i.IdPersona == Id).First();
+        var persona = db.First(i => i.IdPersona == Id);
         return persona;
     }
 
+    public Passeggero[] getPasseggeroByVolo(int idVolo)
+    {
+        var db = airLinesContext.Passeggero;
+        Passeggero[] passeggeri;
+        passeggeri = db.Where(i => i.IdVolo == idVolo).ToArray();
+        return passeggeri;
+    }
+    
     public bool Post(Passeggero passeggero)
     {
         var db = airLinesContext.Passeggero;
@@ -39,7 +47,7 @@ namespace AirLine.Infrastructure.Interfaces
     public bool Delete(int Id)
     {
         var db = airLinesContext.Passeggero;
-        var res = db.Where(i => i.Id == Id).First();
+        var res = db.First(i => i.Id == Id);
         db.Remove(res);
         return true;
     }
@@ -47,10 +55,11 @@ namespace AirLine.Infrastructure.Interfaces
     public bool Update(Passeggero passeggero)
     {
         var db = airLinesContext;
-        var pas = db.Passeggero.Where(i => i.Id == passeggero.Id).First();
+        var pas = db.Passeggero.First(i => i.Id == passeggero.Id);
         pas = passeggero;
         db.SaveChanges();
         return true;
     }
+    
     }
 }

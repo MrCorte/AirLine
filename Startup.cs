@@ -36,7 +36,7 @@ namespace AirLine
             
             //connection string per il db
             services.AddDbContext<AirLinesContext>(options =>
-                options.UseSqlServer("Server=DN-NB0282;Database=AirLines;Trusted_Connection=True;"));
+                options.UseSqlServer("Server=localhost;Database=AirLines;User Id=sa;Password=Matto1998;"));
             
             // riferimento per il completamento della dependency injection
             services.AddTransientServices();
